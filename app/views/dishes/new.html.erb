@@ -1,0 +1,19 @@
+<div class="container">
+  <%= form_for @dish  do |f| %>
+  <%# <%= form_for(:user, url: dishes_path) do |f| %>
+    <div class="form-group">
+      <label for="name">Name dish</label>
+      <input type="text" name="dish[name]" id="name" class="form-control">
+    </div>
+    <div class="form-group">
+      <%= f.label :price %>
+      <%= f.text_field :price, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <label for="origin">Origin</label>
+      <input type="text" name="dish[origin]" value="<%= @dish.origin %>" id="origin" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  <% end %>
+
+</div>
